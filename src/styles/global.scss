@@ -1,4 +1,5 @@
 @import "./variable.scss";
+@import './responsive.scss';
 
 * {
   margin: 0;
@@ -15,19 +16,36 @@ a {
   font-family: "inter", sans-serif;
   background-color: $main-bg;
   color: $main-color;
+  @include sm{
+    width: max-content;
+  }
 }
 
 .container{
   display: flex;
+
+
+  @include sm{
+    width: max-content;
+  }
 }
 
 .menuContainer{
   width: 250px;
   padding: 5px 20px;
   border-right: 2px solid $soft-bg;
+
+  @include lg{
+    width: max-content;
+  }
+  
+  
 }
 
 .contentContainer{
 padding:  5px 20px;
 width: 100%;
+@include sm{
+  width: max-content;
+}
 }
